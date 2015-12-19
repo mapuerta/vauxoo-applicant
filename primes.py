@@ -5,20 +5,20 @@ Your module documentation here
 
 class PrimeClass(object):
     """
-    Your class documentation here
+    class primes
     """
 
     def is_prime(self, num_int):
         """
-        Funcion para calcular los numeros primos
+        function to calculate prime numbers
         """
         if not isinstance(num_int, int):
             return False
         acum = 0
-        # calculo si el numero es primo
+        # calculate whether the number is prime
         for num in range(1, num_int+1):
             if num_int % num == 0:
                 acum += 1
         if acum == 2:
             return True
-        return False  # retorno false si no es primo
+        return False  # return false if not prime
