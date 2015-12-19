@@ -18,7 +18,8 @@ CREATE TABLE employee_department (
 );
 
 
-alter table employee add column  departament_id  integer ;
+alter table employee 
+add column  departament_id  integer ;
 
 
 alter table employee
@@ -110,5 +111,21 @@ INSERT INTO employee_hobby_rel (employee_id, hobby_id)
     VALUES (4, 2);
 INSERT INTO employee_hobby_rel (employee_id, hobby_id)
     VALUES (4, 3);
+
+
+alter table employee add column boss_id integer ;
+
+alter table employee 
+add constraint FK_employee_employee_boss
+	foreign key (boss_id)
+	references employee(id);
+	
+alter table employee 
+add constraint valid_discount CHECK (id <> boss_id)
+
+UPDATE employee SET boss_id = 1 WHERE id = 2;
+UPDATE employee SET boss_id = 2 WHERE id = 3;
+UPDATE employee SET boss_id = 3 WHERE id = 4;
+
 
 
