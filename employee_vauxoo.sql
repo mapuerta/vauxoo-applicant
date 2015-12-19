@@ -14,6 +14,7 @@ CREATE TABLE employee_department (
   description text
 );
 
+
 alter table employee add column  departament_id  integer ;
 
 alter table employee
@@ -53,3 +54,8 @@ INSERT INTO employee (first_name, last_name, departament_id)
     VALUES ('Dolores', 'Fuertes', 3);	
 INSERT INTO employee (first_name, last_name, departament_id)
     VALUES ('Alam', 'Brito', 1);	
+
+
+CREATE TABLE employee_hobby (
+
+);
