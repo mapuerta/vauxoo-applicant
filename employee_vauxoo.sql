@@ -1,9 +1,9 @@
-﻿--CREATE DATABASE employee_employee ;
+﻿
 
 CREATE TABLE employee (
   id serial NOT NULL,
   first_name  varchar(80),
-  last_name  varchar(80),
+  last_name  varchar(80)
 
 );
 
@@ -15,6 +15,10 @@ CREATE TABLE employee_department (
 );
 
 alter table employee add column  departament_id  integer ;
+
+alter table employee
+add constraint FK_employee_unique_departament_id
+	unique (first_name);
 
 alter table employee_department 
 add constraint FK_department
