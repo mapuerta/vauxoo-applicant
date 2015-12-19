@@ -70,7 +70,6 @@ CREATE TABLE employee_hobby (
 );
 
 CREATE TABLE employee_hobby_rel (
-  id serial NOT NULL,
   employee_id  integer,
   hobby_id integer,
    CONSTRAINT employee_hobby_rel_pkey PRIMARY KEY (employee_id, hobby_id),
@@ -121,7 +120,7 @@ add constraint FK_employee_employee_boss
 	references employee(id);
 	
 alter table employee 
-add constraint valid_discount CHECK (id <> boss_id)
+add constraint valid_discount CHECK (id <> boss_id);
 
 UPDATE employee SET boss_id = 1 WHERE id = 2;
 UPDATE employee SET boss_id = 2 WHERE id = 3;
