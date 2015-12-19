@@ -1,4 +1,7 @@
-﻿
+﻿-- Your sql code in this file
+-- NOTE: Please, don't add sentence to create database in this script file.
+--       You can create database locally to test it.
+-- 
 
 CREATE TABLE employee (
   id serial NOT NULL,
@@ -57,5 +60,4 @@ INSERT INTO employee (first_name, last_name, departament_id)
 
 
 CREATE TABLE employee_hobby (
-
 );
